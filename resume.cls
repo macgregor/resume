@@ -84,7 +84,7 @@
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\thinfont      #2}{\bodyfont      #3}
+      {\thinfont #1}\hspace{3ex}{\thinfont #2}\hspace{3ex}{\bodyfont #3}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
@@ -154,13 +154,35 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
+    \parbox[t]{14.8cm}{%
+    #1
+    \hfill%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
   }\\}
 
+\newcommand{\workentry}[5]{%
+    \parbox[t]{14.8cm}{%
+    #1
+    \hspace*{\fill}%
+    \textbf{#2}%
+    \hspace*{\fill}%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    \hspace*{\fill}%
+    \hspace{38pt}\emph{#4}%
+    \hspace*{\fill}\\%
+    #5\bigskip%
+  }\\}
+
+\newcommand{\honorsentry}[2]{%
+    \parbox[t]{14.8cm}{%
+    \textbf{#1}
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #2}%
+    \hfill
+  }\\}
 
 %%%%%%%%%%%%%%
 % Side block %
