@@ -1,4 +1,4 @@
-\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
+\ProvidesClass{resume}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -62,7 +62,7 @@
 ]{texgyreheros}
 
 \newfontfamily\bodyfont[Extension=.otf, Mapping=tex-text]{texgyreheros-regular}
-\newfontfamily\thinfont[Extension=.otf, Mapping=tex-text,]{texgyreheros-regular}
+\newfontfamily\thinfont[Extension=.otf, Mapping=tex-text]{texgyreheros-regular}
 \newfontfamily\headingfont[Extension=.otf, Mapping=tex-text]{texgyreheros-bold}
 
 %\setmathfont{XITS Math}
@@ -79,16 +79,16 @@
   \color{white}%
 }
 
-\newcommand{\header}[3]{%
+\newcommand{\header}[4]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
-      {\thinfont #1}{\bodyfont  #2}
+      {\thinfont #1}{\thinfont      #2}{\bodyfont      #3}
     };
     \node [anchor=north] at (name.south) {%
       \fontsize{14pt}{24pt}\color{header}%
-      \thinfont #3%
+      \thinfont #4%
     };
   \end{tikzpicture}
   \vspace{2.5cm}
