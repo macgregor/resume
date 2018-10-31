@@ -47,7 +47,7 @@
 %%%%%%%%%
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{unicode-math}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[
@@ -195,7 +195,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{4.5}(1.0, 4.3)
+  \begin{textblock}{4.5}(1.0, 3.8)
   \begin{flushright}
   \obeycr
 }{%
@@ -210,7 +210,7 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.1cm,top=1.5cm,right=1.5cm,bottom=1.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks=false,

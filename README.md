@@ -1,8 +1,10 @@
-#About
+# About
 Based off https://www.latextemplates.com/template/friggeri-resume-cv
 
-#Requirements
-##Packages
+
+## Requirements
+
+### Packages
 texlive-scheme-basic
 texlive-xetex-bin
 texlive-euenc
@@ -11,5 +13,9 @@ texlive-textpos
 texlive-lm-math
 texlive-tex-gyre
 
-#Generating pdf
+
+### OSX
+Download the full version of MacTex, should have everything you need: http://www.tug.org/mactex/
+
+## Generating pdf
 xelatex resume.tex
