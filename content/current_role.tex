@@ -13,16 +13,38 @@
 {Red Hat, Inc}
 {Raleigh, NC}
 {Senior Software Application Engineer}
-{Java engineer on the Enterprise Services Platform team. Member of a small team of Sr developers developing and maintaining crosscutting services and providing standardized libraries and patterns to enable other teams to work more efficiently \\
-\textbf{Technologies:} Spring Boot, Openshift, Docker, Mutual TLS, ActiveMQ, Swagger, and most tech from previous role
+{Java engineer on the Enterprise Services Platform team. Member of a team of Sr engineers developing and maintaining crosscutting services (messaging, REST apis) and providing standardized libraries, tools and patterns to enable other teams to work more efficiently in the Red Hat ecosystem. \\
+\\
+\textbf{Technologies:} Spring Boot, Openshift, Docker, Mutual TLS, ActiveMQ, Swagger, Splunk, and most tech from previous role \\
+\\
+\textbf{Responsibilities:}
 \begin{itemize}
-\item subject matter expert on ActiveMQ and JMS messaging
-\item lead upgrade of UMB from JBoss AMQ to Spring Boot + Upstream ActiveMQ, including opensource contributions to upstream
-\item ongoing migration of legacy rest services running Java 6 on JBoss to Java 8 Spring Boot applications running on Openshift (Docker deployments)
-\item implementaiton of CI/CD pipelines for application builds, testing and deployment
-\item implemented new REST service to aid in tracking and granting access requests
-\item champion for documentation and developed open source tooling to integrate markdown documentation with internal document CMS
-\end{itemize}}
+\item Provide training and support for new team members.
+\item Development, maintenance and operational support of various applications (message broker service, REST services).
+\item Provide subject matter expertise on messaging (ActiveMQ brokers, JMS), Red Hat's business domain model and enterprise services ecosystem:
+  \begin{itemize}
+    \item Lead architecture and feature development efforts.
+    \item Providing best practice consulting and documentation to clients.
+    \item Training and support for clients and team members.
+  \end{itemize}
+\item develop documentation, standard libraries and tooling to enable development team to quickly (and correctly) integrate into Red Hat's ecosystem:
+  \begin{itemize}
+    \item Logging standards (server config and Splunk integration).
+    \item Application health checks - internal application health and external dependency health.
+    \item Monitoring, alerting, automatic recovery techniques.
+    \item TLS certificate based authentication and RBAC authorization.
+    \item CI/CD tooling to define, build and deploy services to Openshift.
+  \end{itemize}
+\end{itemize}
+\textbf{Major Projects:}
+\begin{itemize}
+\item Modernization of legacy service architecture from VMs/Java 6/JBoss to Containers (Openshift)/Java 8/Spring Boot.
+\item Lead a complex architectural upgrade to a message broker service (ActiveMQ) to implement horizontal scaling needed to meet quickly growing demand.
+\item Lead a major piece of a project to split a monolithic database (Oracle) shared by many teams/apps into isolated micro-services with their own databases (Postgres). Designed/implemented changes for a specific, business-critical application while acting as tech lead for several teams who needed to solve similar problems for their own applications.
+\item Took the initiative to create support tooling (Python, Jolokia) to solve operational challenges that were otherwise either impossible, impractical or error prone.
+\item Adapted a niche, application specific, security model to work with our standard TLS based RBAC library. This simplified security configuration which was becoming an operational scalability concern.
+\end{itemize}
+}
 
 %------------------------------------------------
 

@@ -184,7 +184,29 @@
   }\\}
 
 %%%%%%%%%%%%%%
-% Side block %
+% Side block Pg 1 %
+%%%%%%%%%%%%%%
+
+\RequirePackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+\newenvironment{aside_p1}{%
+  \let\oldsection\section
+  \renewcommand{\section}[1]{
+    \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
+  }
+  \begin{textblock}{4.5}(1.0, 3.8)
+  \begin{flushright}
+  \obeycr
+}{%
+  \restorecr
+  \end{flushright}
+  \end{textblock}
+  \let\section\oldsection
+}
+
+%%%%%%%%%%%%%%
+% Side block Pg 2 %
 %%%%%%%%%%%%%%
 
 \RequirePackage[absolute,overlay]{textpos}
@@ -195,7 +217,7 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{4.5}(1.0, 3.8)
+  \begin{textblock}{4.5}(1.0, 0.9)
   \begin{flushright}
   \obeycr
 }{%
