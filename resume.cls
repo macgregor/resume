@@ -147,41 +147,27 @@
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \par\medskip
 }{%
-  \end{tabular*}
+  \par
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-    \parbox[t]{14.8cm}{%
-    #1
-    \hfill%
-    \textbf{#2}%
-    \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
-  }\\}
+  \noindent
+  #1\hfill\textbf{#2}\hfill{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+  #4\par\vspace{\parsep}%
+}
 
 \newcommand{\workentry}[5]{%
-    \parbox[t]{14.8cm}{%
-    #1
-    \hspace*{\fill}%
-    \textbf{#2}%
-    \hspace*{\fill}%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    \hspace*{\fill}%
-    \hspace{38pt}\emph{#4}%
-    \hspace*{\fill}\\%
-    #5\bigskip%
-  }\\}
+  \noindent
+  #1\hspace*{\fill}\textbf{#2}\hspace*{\fill}{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+  \hspace*{\fill}\hspace{38pt}\emph{#4}\hspace*{\fill}\\%
+  #5\par\bigskip%
+}
 
 \newcommand{\honorsentry}[2]{%
-    \parbox[t]{14.8cm}{%
-    \textbf{#1}
-    \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #2}%
-    \hfill
-  }\\}
+  \noindent\textbf{#1}\hfill{\footnotesize\addfontfeature{Color=lightgray} #2}\par
+}
 
 %%%%%%%%%%%%%%
 % Side block Pg 1 %
@@ -196,11 +182,11 @@
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
   \begin{textblock}{4.5}(1.0, 3.8)
-  \begin{flushright}
+  \begin{flushleft}
   \obeycr
 }{%
   \restorecr
-  \end{flushright}
+  \end{flushleft}
   \end{textblock}
   \let\section\oldsection
 }
@@ -218,11 +204,11 @@
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
   \begin{textblock}{4.5}(1.0, 0.9)
-  \begin{flushright}
+  \begin{flushleft}
   \obeycr
 }{%
   \restorecr
-  \end{flushright}
+  \end{flushleft}
   \end{textblock}
   \let\section\oldsection
 }
